@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load i18n %}
+{% bootstrap_javascript jquery='full' %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task manager</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
+
+
+  <style>
+      .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+      }
+
+      @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-3 font-weight-normal">
+    <a class="p-2 text-dark" href="{% url 'index' %}">{% trans "Task Manager" %}</a>
+  </h5>
+  <nav class="my-0 mr-md-auto mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'users' %}">{% trans "Users" %}</a>
+  </nav>
+  {% if not user.is_authenticated %}
+  <nav class="my-0 mr-md-auto mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'register' %}">{% trans "Register" %}</a>
+  </nav>
+  <nav class="my-0 mr-md-auto mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'login' %}">{% trans "Login" %}</a>
+  </nav>
+  {% else %}
+  <nav class="my-0 mr-md-auto mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'statuses' %}">{% trans "statuses" %}</a>
+  </nav>
+  <nav class="my-0 mr-md-auto mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'labels' %}">{% trans "labels" %}</a>
+  </nav>
+  <nav class="my-0 mr-md-auto mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'tasks' %}">{% trans "tasks" %}</a>
+  </nav>
+  <nav class="my-0 mr-md-auto mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'logout' %}">{% trans "Logout" %}</a>
+  </nav>
+  {% endif %}
+</div>
+    <div class="container">
+
+  {% bootstrap_messages %}
+    {% block content %}
+    {% endblock %}
+
+    </div>
+</body>
+</html>

@@ -8,6 +8,10 @@ authors = ["Svennson17 <kiryl.shvedau@gmail.com>"]
 python = "^3.9"
 Django = "^4.0.4"
 gunicorn = "^20.1.0"
+django-bootstrap4 = "^22.1"
+dj-database-url = "^0.5.0"
+django-filter = "^21.1"
+rollbar = "^0.16.2"
 
 [tool.poetry.dev-dependencies]
 

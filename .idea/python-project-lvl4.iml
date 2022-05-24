@@ -9,6 +9,10 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/task_manager/templates" />
+        <option value="$MODULE_DIR$/task_manager/templates/labels" />
+        <option value="$MODULE_DIR$/task_manager/templates/statuses" />
+        <option value="$MODULE_DIR$/task_manager/templates/tasks" />
+        <option value="$MODULE_DIR$/task_manager/templates/users" />
       </list>
     </option>
   </component>

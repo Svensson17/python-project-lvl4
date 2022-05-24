@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load i18n %}
+{% bootstrap_javascript jquery='full' %}
+{% block content %}
+<div>
+  <td>
+    <a class="p-2 text-dark" href="{% url 'create_stat'%}">{% trans "create status" %}</a>
+  </td>
+  <table class='table table-hover table-bordered'>
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">{% trans 'status name' %}</th>
+      <th scope="col">{% trans 'edit' %}</th>
+      <th scope="col">{% trans 'delete' %}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for status in statuses %}
+      <tr>
+        <td>{{status.id}}</td>
+        <td>{{status.name}}</td>
+        <td>
+           <a class="p-2 text-dark" href="{% url 'update_stat' status.id %}">{% trans "edit" %}</a>
+        </td>
+        <td>
+           <a class="p-2 text-dark" href="{% url 'delete_stat' status.id %}">{% trans "delete" %}</a>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
