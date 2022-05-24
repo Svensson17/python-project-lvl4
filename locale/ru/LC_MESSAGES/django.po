@@ -217,7 +217,7 @@ msgstr "Пользователь был успешно создан"
 
 #: task_manager/views.py:39
 msgid "Welcome to your profile"
-msgstr "Добро пожаловать в ваш профиль"
+msgstr "Вы залогинены"
 
 #: task_manager/views.py:49
 msgid "You are logged out"
