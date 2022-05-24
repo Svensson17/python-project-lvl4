@@ -41,7 +41,13 @@ class LoginUser(SuccessMessageMixin, LoginView):
 
 class LogoutUser(LogoutView):
     template_name = 'users/logout.html'
-    success_url = 'login/'
+
+    def get_success_url(self):
+        return reverse('index')
+
+    def dispatch(self, request, *args, **kwargs):
+        messages.info(request, _('You are logged out'))
+        return super().dispatch(request, *args, **kwargs)
 
 
 class EditUser(LoginRequiredMixin, CheckUserForDeleteMixin, UpdateView):
@@ -69,3 +75,10 @@ class DeleteUser(LoginRequiredMixin, CheckUserForDeleteMixin, DeleteView):
 
     def get_success_url(self):
         return reverse('users')
+
+    def delete(self, request, *args, **kwargs):
+        if self.get_object().executor.all().exists() or self.get_object().author.all().exists():
+            messages.error(self.request, _('Unable to delete user because it is in use'))
+            return redirect('users')
+        messages.success(self.request, _('User deleted'))
+        return super().delete(request, *args, **kwargs)

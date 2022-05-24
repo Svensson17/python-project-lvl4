@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 13:05+0000\n"
+"POT-Creation-Date: 2022-05-24 15:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,31 +60,39 @@ msgstr "Дата создания"
 msgid "description"
 msgstr "Описание"
 
-#: app/views.py:67
+#: app/views.py:57
+msgid "Unable to delete status because it is in use"
+msgstr "Невозможно удалить. Статус используется."
+
+#: app/views.py:59
+msgid "Status successfully deleted"
+msgstr "Задача успешно удалена"
+
+#: app/views.py:74
 msgid "Task successfully created"
 msgstr "Задача успешно создана"
 
-#: app/views.py:81
+#: app/views.py:88
 msgid "Task successfully updated"
 msgstr "Задача успешно обновлена"
 
-#: app/views.py:94
+#: app/views.py:101
 msgid "Task successfully deleted"
 msgstr "Задача успешно удалена"
 
-#: app/views.py:117
+#: app/views.py:124
 msgid "Label successfully created"
 msgstr "Метка успешно создана"
 
-#: app/views.py:127
+#: app/views.py:134
 msgid "Label successfully updated"
 msgstr "Метка успешно обновлена"
 
-#: app/views.py:140
+#: app/views.py:147
 msgid "Label successfully deleted"
 msgstr "Метка успешно удалена"
 
-#: task_manager/mixin.py:12 task_manager/views.py:51
+#: task_manager/mixin.py:12 task_manager/views.py:57
 msgid "You do not have permission to modify another user."
 msgstr "У вас нет прав редактировать другого пользователя."
 
@@ -102,9 +110,8 @@ msgid "Register"
 msgstr "Регистрация"
 
 #: task_manager/templates/base.html:44
-#: task_manager/templates/users/login.html:10
-msgid "Login"
-msgstr "Войти"
+msgid "Login_user"
+msgstr "Вход"
 
 #: task_manager/templates/base.html:48
 msgid "statuses"
@@ -188,6 +195,10 @@ msgstr "Создать задачу"
 msgid "Show"
 msgstr "Показать"
 
+#: task_manager/templates/users/login.html:10
+msgid "Login"
+msgstr "Войти"
+
 #: task_manager/templates/users/users.html:12
 msgid "User"
 msgstr "Пользователь"
@@ -208,9 +219,23 @@ msgstr "Пользователь был успешно создан"
 msgid "Welcome to your profile"
 msgstr "Добро пожаловать в ваш профиль"
 
-#: task_manager/views.py:64
+#: task_manager/views.py:49
+msgid "You are logged out"
+msgstr ""
+
+#: task_manager/views.py:70
 msgid "You do not have permission to modify another user"
 msgstr "У вас нет прав редактировать другого пользователя."
+
+#: task_manager/views.py:81
+msgid "Unable to delete user because it is in use"
+msgstr ""
+
+#: task_manager/views.py:83
+#, fuzzy
+#| msgid "delete"
+msgid "User deleted"
+msgstr "Удалить"
 
 #, fuzzy, python-brace-format
 #~| msgid "Status: {self.name}"

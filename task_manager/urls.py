@@ -28,7 +28,7 @@ urlpatterns = [
     path('edit_user/<int:pk>/', EditUser.as_view(), name='edit_user'),
     path('logout/', LogoutUser.as_view(), name='logout'),
     path('login/', LoginUser.as_view(), name='login'),
-    path('register/', CreateUser.as_view(), name='register'),
+    path('users/create/', CreateUser.as_view(), name='register'),
     path('users/', UsersList.as_view(), name='users'),
     path('', IndexView.as_view(), name='index'),
     path('admin/', admin.site.urls),
