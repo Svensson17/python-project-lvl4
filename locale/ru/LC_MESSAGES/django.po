@@ -104,7 +104,7 @@ msgstr "Регистрация"
 #: task_manager/templates/base.html:44
 #: task_manager/templates/users/login.html:10
 msgid "Login"
-msgstr "Вход"
+msgstr "Войти"
 
 #: task_manager/templates/base.html:48
 msgid "statuses"
