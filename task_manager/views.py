@@ -39,15 +39,15 @@ class LoginUser(SuccessMessageMixin, LoginView):
     success_message = _('Welcome to your profile')
 
 
-class LogoutUser(LogoutView):
+class LogoutUser(SuccessMessageMixin, LogoutView):
     template_name = 'users/logout.html'
+
+    def get_success_url(self):
+        return reverse('index')
 
     def dispatch(self, request, *args, **kwargs):
         messages.info(request, _('You are logged out'))
         return super().dispatch(request, *args, **kwargs)
-
-    def get_success_url(self):
-        return reverse('index')
 
 
 class EditUser(LoginRequiredMixin, CheckUserForDeleteMixin, UpdateView):
