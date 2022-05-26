@@ -221,7 +221,7 @@ msgstr "Вы залогинены"
 
 #: task_manager/views.py:49
 msgid "You are logged out"
-msgstr ""
+msgstr "Вы разлогинены"
 
 #: task_manager/views.py:70
 msgid "You do not have permission to modify another user"
