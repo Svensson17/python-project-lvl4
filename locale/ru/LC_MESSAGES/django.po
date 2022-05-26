@@ -205,7 +205,7 @@ msgstr "Пользователь"
 
 #: task_manager/templates/users/users.html:13
 msgid "username"
-msgstr "Полное имя"
+msgstr "Имя пользователя"
 
 #: task_manager/templates/users/users.html:14
 msgid "registration date"
