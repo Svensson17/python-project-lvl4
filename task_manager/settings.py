@@ -150,3 +150,5 @@ rollbar.init(**ROLLBAR)
 LOGIN_URL = reverse_lazy('login')
 LOGIN_REDIRECT_URL = reverse_lazy('index')
 LOGOUT_REDIRECT_URL = reverse_lazy('index')
+
+# AUTH_USER_MODEL = 'app.User'

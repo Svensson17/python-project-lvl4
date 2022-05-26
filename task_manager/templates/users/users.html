@@ -21,7 +21,7 @@
       <tr>
         <td>{{user.id}}</td>
         <td>{{user.username}}</td>
-        <td>{{user.get_full_name}}</td>
+        <td>{{user.first_name}} {{user.last_name}}</td>
         <td>{{user.date_joined}}</td>
         <td>
            <a class="p-2 text-dark" href="{% url 'edit_user' user.id %}">{% trans "edit" %}</a>
