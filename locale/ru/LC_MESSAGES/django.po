@@ -232,20 +232,5 @@ msgid "Unable to delete user because it is in use"
 msgstr ""
 
 #: task_manager/views.py:83
-#, fuzzy
-#| msgid "delete"
 msgid "User deleted"
 msgstr "Удалить"
-
-#, fuzzy, python-brace-format
-#~| msgid "Status: {self.name}"
-#~ msgid "Status: {self.name}"
-#~ msgstr "Статус:"
-
-#, python-brace-format
-#~ msgid "Label: {self.name}"
-#~ msgstr "Метка: {self.name}"
-
-#, python-brace-format
-#~ msgid "Task: {self.name}"
-#~ msgstr "Задача: {self.name}"
