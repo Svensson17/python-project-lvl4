@@ -227,7 +227,6 @@ msgid "You are logged out"
 msgstr "Вы разлогинены"
 
 #: task_manager/views.py:55
-
 msgid "User successfully updated"
 msgstr "Пользователь успешно изменён"
 
