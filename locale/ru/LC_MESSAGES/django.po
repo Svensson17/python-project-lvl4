@@ -216,7 +216,7 @@ msgstr "Дата регистрации"
 
 #: task_manager/views.py:33
 msgid "User was successfully created"
-msgstr "Пользователь был успешно создан"
+msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/views.py:41
 msgid "Welcome to your profile"
