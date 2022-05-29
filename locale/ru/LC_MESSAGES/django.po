@@ -34,7 +34,7 @@ msgstr "Имя"
 
 #: app/models.py:21 task_manager/templates/labels/labels.html:15
 msgid "label_name"
-msgstr "Метка"
+msgstr "Имя"
 
 #: app/models.py:28 task_manager/templates/tasks/tasks.html:28
 msgid "task_name"
@@ -149,7 +149,7 @@ msgstr "Создать метку"
 #: task_manager/templates/statuses/delete_stat.html:10
 #: task_manager/templates/tasks/delete_task.html:10
 msgid "Are you sure you want to delete"
-msgstr "Вы уверены,что хотите удалить? "
+msgstr "Вы уверены,что хотите удалить "
 
 #: task_manager/templates/labels/delete_label.html:11
 #: task_manager/templates/labels/labels.html:17
