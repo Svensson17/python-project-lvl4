@@ -50,7 +50,7 @@ class LogoutUser(LogoutView):
 class EditUser(LoginRequiredMixin, CheckUserForDeleteMixin, UpdateView):
     model = get_user_model()
     template_name = 'users/edit_user.html'
-    fields = ['first_name', 'last_name', 'username', 'email']
+    form_class = UserForm
     permission_denied_message = _('You do not have permission to modify another user.')
 
     def handle_no_permission(self):
