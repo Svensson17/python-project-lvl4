@@ -182,7 +182,7 @@ msgstr "Создать статус"
 
 #: task_manager/templates/statuses/statuses.html:15
 msgid "status name"
-msgstr "Статус"
+msgstr "Имя"
 
 #: task_manager/templates/tasks/create_task.html:10
 #: task_manager/templates/tasks/tasks.html:9
