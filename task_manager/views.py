@@ -52,6 +52,7 @@ class EditUser(LoginRequiredMixin, CheckUserForDeleteMixin, UpdateView):
     template_name = 'users/edit_user.html'
     form_class = UserForm
     permission_denied_message = _('You do not have permission to modify another user.')
+    success_message = _('User successfully updated')
 
     def handle_no_permission(self):
         messages.error(self.request, self.get_permission_denied_message())
