@@ -45,7 +45,7 @@ msgid "author"
 msgstr "Автор"
 
 #: app/models.py:35 task_manager/templates/tasks/tasks.html:26
-msgid "performer"
+msgid "executor"
 msgstr "Исполнитель"
 
 #: app/models.py:39 task_manager/templates/tasks/tasks.html:29
