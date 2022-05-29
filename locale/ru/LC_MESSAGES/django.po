@@ -50,7 +50,7 @@ msgstr "Исполнитель"
 
 #: app/models.py:39 task_manager/templates/tasks/tasks.html:29
 msgid "status"
-msgstr "Статусы"
+msgstr "Статус"
 
 #: app/models.py:45 task_manager/templates/tasks/tasks.html:27
 msgid "created_at"
