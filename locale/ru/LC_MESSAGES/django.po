@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-29 12:55+0000\n"
+"POT-Creation-Date: 2022-05-29 13:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,6 +138,7 @@ msgstr "Привет"
 
 #: task_manager/templates/labels/create_label.html:10
 #: task_manager/templates/statuses/create_stat.html:10
+#: task_manager/templates/tasks/create_task.html:10
 msgid "create"
 msgstr "Создать"
 
@@ -191,7 +192,6 @@ msgstr "Изменить"
 msgid "create status"
 msgstr "Создать статус"
 
-#: task_manager/templates/tasks/create_task.html:10
 #: task_manager/templates/tasks/tasks.html:9
 msgid "create task"
 msgstr "Создать задачу"
@@ -252,5 +252,4 @@ msgstr ""
 msgid "User deleted"
 msgstr "Удалить"
 
-#~ msgid "label"
-#~ msgstr "Метка"
+

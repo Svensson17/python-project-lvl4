@@ -31,16 +31,16 @@ class Task(models.Model):
                                verbose_name=_('author'),
                                blank=True, null=True)
     executor = models.ForeignKey(get_user_model(), on_delete=models.PROTECT,
-                                  related_name='executor',
-                                  verbose_name=_('executor'),
-                                  blank=True, null=True)
+                                 related_name='executor',
+                                 verbose_name=_('executor'),
+                                 blank=True, null=True)
     status = models.ForeignKey(Status, on_delete=models.PROTECT,
                                related_name='status',
                                verbose_name=_('status'),
                                blank=True, null=True)
     labels = models.ManyToManyField(Label, related_name='labels',
-                                   verbose_name=_('labels'),
-                                   blank=True)
+                                    verbose_name=_('labels'),
+                                    blank=True)
     created_at = models.DateTimeField(
         default=timezone.now, verbose_name=_('created_at')
     )
