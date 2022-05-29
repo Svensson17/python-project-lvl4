@@ -194,8 +194,6 @@ msgid "Show"
 msgstr "Показать"
 
 #: task_manager/templates/users/delete_user.html:10
-#, fuzzy
-#| msgid "delete"
 msgid "Yes, delete"
 msgstr "Да, удалить"
 
