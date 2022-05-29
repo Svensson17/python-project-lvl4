@@ -30,9 +30,9 @@ class Task(models.Model):
                                related_name='author',
                                verbose_name=_('author'),
                                blank=True, null=True)
-    performer = models.ForeignKey(get_user_model(), on_delete=models.PROTECT,
-                                  related_name='performer',
-                                  verbose_name=_('performer'),
+    executor = models.ForeignKey(get_user_model(), on_delete=models.PROTECT,
+                                  related_name='executor',
+                                  verbose_name=_('executor'),
                                   blank=True, null=True)
     status = models.ForeignKey(Status, on_delete=models.PROTECT,
                                related_name='status',
