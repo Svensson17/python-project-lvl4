@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-29 11:20+0000\n"
+"POT-Creation-Date: 2022-05-29 11:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,7 +154,6 @@ msgstr "Вы уверены,что хотите удалить? "
 #: task_manager/templates/labels/delete_label.html:11
 #: task_manager/templates/labels/labels.html:17
 #: task_manager/templates/labels/labels.html:29
-#: task_manager/templates/statuses/delete_stat.html:11
 #: task_manager/templates/statuses/statuses.html:17
 #: task_manager/templates/statuses/statuses.html:29
 #: task_manager/templates/tasks/delete_task.html:11
@@ -187,6 +186,11 @@ msgstr "Изменить"
 msgid "create"
 msgstr "Создать"
 
+#: task_manager/templates/statuses/delete_stat.html:11
+#: task_manager/templates/users/delete_user.html:10
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
 #: task_manager/templates/statuses/statuses.html:9
 msgid "create status"
 msgstr "Создать статус"
@@ -199,10 +203,6 @@ msgstr "Создать задачу"
 #: task_manager/templates/tasks/tasks.html:17
 msgid "Show"
 msgstr "Показать"
-
-#: task_manager/templates/users/delete_user.html:10
-msgid "Yes, delete"
-msgstr "Да, удалить"
 
 #: task_manager/templates/users/login.html:10
 msgid "Login"
@@ -256,5 +256,3 @@ msgstr ""
 msgid "User deleted"
 msgstr "Удалить"
 
-#~ msgid "Status created successfully"
-#~ msgstr "Пользователь успешно удалён"
