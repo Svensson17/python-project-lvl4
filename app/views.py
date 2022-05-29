@@ -75,7 +75,7 @@ class CreateTask(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     success_message = _('Task successfully created')
 
     def form_valid(self, form):
-        form.instance.executor = self.request.user
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
     def get_success_url(self):
