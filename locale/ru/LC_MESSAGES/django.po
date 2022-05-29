@@ -174,7 +174,7 @@ msgstr "Изменить"
 #: task_manager/templates/tasks/update_task.html:10
 #: task_manager/templates/users/edit_user.html:10
 msgid "update"
-msgstr "Обновить"
+msgstr "Изменить"
 
 #: task_manager/templates/statuses/create_stat.html:10
 #: task_manager/templates/statuses/statuses.html:9
