@@ -178,7 +178,7 @@ msgstr "Изменить"
 #: task_manager/templates/statuses/create_stat.html:10
 #: task_manager/templates/statuses/statuses.html:9
 msgid "create status"
-msgstr "Создать статус"
+msgstr "Создать"
 
 #: task_manager/templates/statuses/statuses.html:15
 msgid "status name"
