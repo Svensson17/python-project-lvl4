@@ -7,8 +7,8 @@ from django.utils.translation import gettext as _
 class TaskFilter(FilterSet):
     label = ModelChoiceFilter(
         queryset=Label.objects.all(),
-        field_name='label',
-        label=_('label')
+        field_name='labels',
+        label=_('labels')
     )
     self_tasks = BooleanFilter(
         widget=forms.CheckboxInput,

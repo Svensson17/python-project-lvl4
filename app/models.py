@@ -38,8 +38,8 @@ class Task(models.Model):
                                related_name='status',
                                verbose_name=_('status'),
                                blank=True, null=True)
-    label = models.ManyToManyField(Label, related_name='label',
-                                   verbose_name=_('label'),
+    labels = models.ManyToManyField(Label, related_name='labels',
+                                   verbose_name=_('labels'),
                                    blank=True)
     created_at = models.DateTimeField(
         default=timezone.now, verbose_name=_('created_at')
