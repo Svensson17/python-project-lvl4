@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-29 11:12+0000\n"
+"POT-Creation-Date: 2022-05-29 11:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,35 +64,39 @@ msgstr "Описание"
 msgid "Status successfully created"
 msgstr "Статус успешно создан"
 
-#: app/views.py:56
-msgid "Unable to delete status because it is in use"
-msgstr "Невозможно удалить. Статус используется."
+#: app/views.py:34
+msgid "Status successfully updated"
+msgstr "Статус успешно изменён"
 
-#: app/views.py:58
+#: app/views.py:47 app/views.py:60
 msgid "Status successfully deleted"
 msgstr "Статус успешно удален"
 
-#: app/views.py:73
+#: app/views.py:58
+msgid "Unable to delete status because it is in use"
+msgstr "Невозможно удалить. Статус используется."
+
+#: app/views.py:75
 msgid "Task successfully created"
 msgstr "Задача успешно создана"
 
-#: app/views.py:87
+#: app/views.py:89
 msgid "Task successfully updated"
 msgstr "Задача успешно обновлена"
 
-#: app/views.py:100
+#: app/views.py:102
 msgid "Task successfully deleted"
 msgstr "Задача успешно удалена"
 
-#: app/views.py:123
+#: app/views.py:125
 msgid "Label successfully created"
 msgstr "Метка успешно создана"
 
-#: app/views.py:133
+#: app/views.py:135
 msgid "Label successfully updated"
 msgstr "Метка успешно обновлена"
 
-#: app/views.py:146
+#: app/views.py:148
 msgid "Label successfully deleted"
 msgstr "Метка успешно удалена"
 

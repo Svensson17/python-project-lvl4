@@ -27,10 +27,11 @@ class CreateStatus(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         return reverse('statuses')
 
 
-class UpdateStatus(LoginRequiredMixin, UpdateView):
+class UpdateStatus(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Status
     fields = ['name']
     template_name = 'statuses/update_stat.html'
+    success_message = _('Status successfully updated')
 
     def handle_no_permission(self):
         messages.error(self.request, self.get_permission_denied_message())
@@ -40,9 +41,10 @@ class UpdateStatus(LoginRequiredMixin, UpdateView):
         return reverse('statuses')
 
 
-class DeleteStatus(LoginRequiredMixin, DeleteView):
+class DeleteStatus(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Status
     template_name = 'statuses/delete_stat.html'
+    success_message = _('Status successfully deleted')
 
     def handle_no_permission(self):
         messages.error(self.request, self.get_permission_denied_message())
