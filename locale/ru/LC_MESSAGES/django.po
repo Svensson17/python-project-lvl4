@@ -38,7 +38,7 @@ msgstr "Имя"
 
 #: app/models.py:28 task_manager/templates/tasks/tasks.html:28
 msgid "task_name"
-msgstr "Задача"
+msgstr "Имя"
 
 #: app/models.py:31 task_manager/templates/tasks/tasks.html:25
 msgid "author"
