@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:55+0000\n"
+"POT-Creation-Date: 2022-05-29 09:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: app/filter.py:11 app/models.py:36
+#: app/filter.py:11 app/models.py:42
 msgid "label"
 msgstr "Метка"
 
@@ -28,35 +28,35 @@ msgstr "Метка"
 msgid "show my tasks"
 msgstr "Показать мои задачи"
 
-#: app/models.py:8
+#: app/models.py:14
 msgid "status_name"
 msgstr "Статус"
 
-#: app/models.py:15 task_manager/templates/labels/labels.html:15
+#: app/models.py:21 task_manager/templates/labels/labels.html:15
 msgid "label_name"
 msgstr "Метка"
 
-#: app/models.py:22 task_manager/templates/tasks/tasks.html:28
+#: app/models.py:28 task_manager/templates/tasks/tasks.html:28
 msgid "task_name"
 msgstr "Задача"
 
-#: app/models.py:25 task_manager/templates/tasks/tasks.html:25
+#: app/models.py:31 task_manager/templates/tasks/tasks.html:25
 msgid "author"
 msgstr "Автор"
 
-#: app/models.py:29 task_manager/templates/tasks/tasks.html:26
+#: app/models.py:35 task_manager/templates/tasks/tasks.html:26
 msgid "performer"
 msgstr "Исполнитель"
 
-#: app/models.py:33 task_manager/templates/tasks/tasks.html:29
+#: app/models.py:39 task_manager/templates/tasks/tasks.html:29
 msgid "status"
 msgstr "Статусы"
 
-#: app/models.py:38 task_manager/templates/tasks/tasks.html:27
+#: app/models.py:45 task_manager/templates/tasks/tasks.html:27
 msgid "created_at"
 msgstr "Дата создания"
 
-#: app/models.py:39
+#: app/models.py:48
 msgid "description"
 msgstr "Описание"
 
@@ -92,7 +92,7 @@ msgstr "Метка успешно обновлена"
 msgid "Label successfully deleted"
 msgstr "Метка успешно удалена"
 
-#: task_manager/mixin.py:12 task_manager/views.py:57
+#: task_manager/mixin.py:12 task_manager/views.py:54
 msgid "You do not have permission to modify another user."
 msgstr "У вас нет прав редактировать другого пользователя."
 
@@ -105,7 +105,6 @@ msgid "Users"
 msgstr "Пользователи"
 
 #: task_manager/templates/base.html:41
-#: task_manager/templates/users/registration.html:10
 msgid "Register"
 msgstr "Регистрация"
 
@@ -199,6 +198,10 @@ msgstr "Показать"
 msgid "Login"
 msgstr "Войти"
 
+#: task_manager/templates/users/registration.html:10
+msgid "Sign Up"
+msgstr "Зарегистрировать"
+
 #: task_manager/templates/users/users.html:12
 msgid "User"
 msgstr "Пользователь"
@@ -211,26 +214,26 @@ msgstr "Имя пользователя"
 msgid "registration date"
 msgstr "Дата регистрации"
 
-#: task_manager/views.py:31
+#: task_manager/views.py:33
 msgid "User was successfully created"
 msgstr "Пользователь был успешно создан"
 
-#: task_manager/views.py:39
+#: task_manager/views.py:41
 msgid "Welcome to your profile"
 msgstr "Вы залогинены"
 
-#: task_manager/views.py:49
+#: task_manager/views.py:46
 msgid "You are logged out"
 msgstr "Вы разлогинены"
 
-#: task_manager/views.py:70
+#: task_manager/views.py:67
 msgid "You do not have permission to modify another user"
 msgstr "У вас нет прав редактировать другого пользователя."
 
-#: task_manager/views.py:81
+#: task_manager/views.py:83
 msgid "Unable to delete user because it is in use"
 msgstr ""
 
-#: task_manager/views.py:83
+#: task_manager/views.py:86
 msgid "User deleted"
 msgstr "Удалить"
