@@ -62,11 +62,11 @@ class EditUser(LoginRequiredMixin, SuccessMessageMixin, CheckUserForDeleteMixin,
         return reverse('users')
 
 
-class DeleteUser(LoginRequiredMixin, CheckUserForDeleteMixin, DeleteView):
+class DeleteUser(LoginRequiredMixin, SuccessMessageMixin, CheckUserForDeleteMixin, DeleteView):
     model = get_user_model()
     template_name = 'users/delete_user.html'
     permission_denied_message = _('You do not have permission to modify another user')
-
+    success_message = _('Do you want to delete user?')
     def handle_no_permission(self):
         messages.error(self.request, self.get_permission_denied_message())
         return redirect(reverse_lazy('users'))

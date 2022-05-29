@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-29 09:45+0000\n"
+"POT-Creation-Date: 2022-05-29 10:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,7 +152,6 @@ msgstr "Вы уверены,что хотите удалить? "
 #: task_manager/templates/tasks/delete_task.html:11
 #: task_manager/templates/tasks/tasks.html:31
 #: task_manager/templates/tasks/tasks.html:47
-#: task_manager/templates/users/delete_user.html:10
 #: task_manager/templates/users/users.html:16
 #: task_manager/templates/users/users.html:30
 msgid "delete"
@@ -194,6 +193,12 @@ msgstr "Создать задачу"
 msgid "Show"
 msgstr "Показать"
 
+#: task_manager/templates/users/delete_user.html:10
+#, fuzzy
+#| msgid "delete"
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
 #: task_manager/templates/users/login.html:10
 msgid "Login"
 msgstr "Войти"
@@ -233,6 +238,10 @@ msgstr "Пользователь успешно изменён"
 #: task_manager/views.py:68
 msgid "You do not have permission to modify another user"
 msgstr "У вас нет прав редактировать другого пользователя."
+
+#: task_manager/views.py:69
+msgid "Do you want to delete user?"
+msgstr "Вы уверены, что хотите удалить? "
 
 #: task_manager/views.py:84
 msgid "Unable to delete user because it is in use"
