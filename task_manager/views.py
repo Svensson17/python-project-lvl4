@@ -66,7 +66,7 @@ class DeleteUser(LoginRequiredMixin, SuccessMessageMixin, CheckUserForDeleteMixi
     model = get_user_model()
     template_name = 'users/delete_user.html'
     permission_denied_message = _('You do not have permission to modify another user')
-    success_message = _('Do you want to delete user?')
+    success_message = _('User was deleted successfully')
     def handle_no_permission(self):
         messages.error(self.request, self.get_permission_denied_message())
         return redirect(reverse_lazy('users'))
