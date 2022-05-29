@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-29 11:25+0000\n"
+"POT-Creation-Date: 2022-05-29 12:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgstr "Задача успешно создана"
 
 #: app/views.py:89
 msgid "Task successfully updated"
-msgstr "Задача успешно обновлена"
+msgstr "Задача успешно изменена"
 
 #: app/views.py:102
 msgid "Task successfully deleted"
@@ -141,9 +141,9 @@ msgid "Hello"
 msgstr "Привет"
 
 #: task_manager/templates/labels/create_label.html:10
-#: task_manager/templates/labels/labels.html:9
-msgid "create label"
-msgstr "Создать метку"
+#: task_manager/templates/statuses/create_stat.html:10
+msgid "create"
+msgstr "Создать"
 
 #: task_manager/templates/labels/delete_label.html:10
 #: task_manager/templates/statuses/delete_stat.html:10
@@ -164,6 +164,10 @@ msgstr "Вы уверены,что хотите удалить "
 msgid "delete"
 msgstr "Удалить"
 
+#: task_manager/templates/labels/labels.html:9
+msgid "create label"
+msgstr "Создать метку"
+
 #: task_manager/templates/labels/labels.html:16
 #: task_manager/templates/labels/labels.html:26
 #: task_manager/templates/statuses/statuses.html:16
@@ -181,10 +185,6 @@ msgstr "Изменить"
 #: task_manager/templates/users/edit_user.html:10
 msgid "update"
 msgstr "Изменить"
-
-#: task_manager/templates/statuses/create_stat.html:10
-msgid "create"
-msgstr "Создать"
 
 #: task_manager/templates/statuses/delete_stat.html:11
 #: task_manager/templates/users/delete_user.html:10
@@ -255,4 +255,3 @@ msgstr ""
 #: task_manager/views.py:87
 msgid "User deleted"
 msgstr "Удалить"
-
