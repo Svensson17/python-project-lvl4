@@ -5,7 +5,6 @@ from django.shortcuts import redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from django_filters.views import FilterView
-
 from app.filter import TaskFilter
 from app.forms import TaskForm
 from app.models import Status, Task, Label
@@ -22,7 +21,7 @@ class CreateStatus(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Status
     fields = ['name']
     template_name = 'statuses/create_stat.html'
-    success_message = 'Status created'
+    success_message = _('Status successfully created')
 
     def get_success_url(self):
         return reverse('statuses')
