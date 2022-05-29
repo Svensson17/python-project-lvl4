@@ -16,6 +16,7 @@ class TaskFilter(FilterSet):
         method='filter_self_task',
         label=_('show my tasks')
     )
+
     def filter_self_task(self, queryset, name, value):
         if value:
             return queryset.filter(author=self.request.user)

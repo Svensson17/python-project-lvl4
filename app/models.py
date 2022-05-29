@@ -41,8 +41,12 @@ class Task(models.Model):
     label = models.ManyToManyField(Label, related_name='label',
                                    verbose_name=_('label'),
                                    blank=True)
-    created_at = models.DateTimeField(default=timezone.now, verbose_name=_('created_at'))
-    description = models.TextField(verbose_name=_('description'), blank=True)
+    created_at = models.DateTimeField(
+        default=timezone.now, verbose_name=_('created_at')
+    )
+    description = models.TextField(
+        verbose_name=_('description'), blank=True
+    )
     end_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):

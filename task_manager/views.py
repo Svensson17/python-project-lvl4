@@ -7,6 +7,8 @@ from django.shortcuts import redirect
 from django.views.generic import TemplateView, ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.contrib import messages
+
+from app.forms import UserForm
 from task_manager.mixin import CheckUserForDeleteMixin
 from django.utils.translation import gettext as _
 
@@ -22,7 +24,7 @@ class UsersList(ListView):
 
 
 class CreateUser(SuccessMessageMixin, CreateView):
-    form_class = UserCreationForm
+    form_class = UserForm
 
     def get_success_url(self):
         return reverse('index')
@@ -72,8 +74,14 @@ class DeleteUser(LoginRequiredMixin, CheckUserForDeleteMixin, DeleteView):
         return reverse('users')
 
     def delete(self, request, *args, **kwargs):
-        if self.get_object().executor.all().exists() or self.get_object().author.all().exists():
-            messages.error(self.request, _('Unable to delete user because it is in use'))
+        if (
+            self.get_object().executor.all().exists()
+            or self.get_object().author.all().exists()
+        ):
+            messages.error(
+                self.request,
+                _('Unable to delete user because it is in use')
+            )
             return redirect('users')
         messages.success(self.request, _('User deleted'))
         return super().delete(request, *args, **kwargs)
