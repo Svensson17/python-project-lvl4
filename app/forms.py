@@ -7,7 +7,7 @@ from app.models import Task
 class TaskForm(ModelForm):
     class Meta:
         model = Task
-        fields = ['name', 'description', 'status', 'author', 'labels']
+        fields = ['name', 'description', 'status', 'executor', 'labels']
 
 
 class UserForm(UserCreationForm):
