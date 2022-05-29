@@ -27,7 +27,7 @@ class CreateUser(SuccessMessageMixin, CreateView):
     form_class = UserForm
 
     def get_success_url(self):
-        return reverse('index')
+        return reverse('login')
 
     template_name = 'users/registration.html'
     success_message = _('User was successfully created')
