@@ -94,7 +94,7 @@ msgstr "Метка успешно создана"
 
 #: app/views.py:135
 msgid "Label successfully updated"
-msgstr "Метка успешно обновлена"
+msgstr "Метка успешно изменена"
 
 #: app/views.py:148
 msgid "Label successfully deleted"
