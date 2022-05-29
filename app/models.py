@@ -11,7 +11,7 @@ from django.utils.translation import gettext as _
 
 
 class Status(models.Model):
-    name = models.CharField(_('status_name'), max_length=30)
+    name = models.CharField(_('status name'), max_length=30)
 
     def __str__(self):
         return self.name
