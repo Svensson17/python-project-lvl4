@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-29 10:39+0000\n"
+"POT-Creation-Date: 2022-05-29 11:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,9 +28,9 @@ msgstr "Метка"
 msgid "show my tasks"
 msgstr "Показать мои задачи"
 
-#: app/models.py:14
-msgid "status_name"
-msgstr "Статус"
+#: app/models.py:14 task_manager/templates/statuses/statuses.html:15
+msgid "status name"
+msgstr "Имя"
 
 #: app/models.py:21 task_manager/templates/labels/labels.html:15
 msgid "label_name"
@@ -176,13 +176,12 @@ msgid "update"
 msgstr "Изменить"
 
 #: task_manager/templates/statuses/create_stat.html:10
-#: task_manager/templates/statuses/statuses.html:9
-msgid "create status"
+msgid "create"
 msgstr "Создать"
 
-#: task_manager/templates/statuses/statuses.html:15
-msgid "status name"
-msgstr "Имя"
+#: task_manager/templates/statuses/statuses.html:9
+msgid "create status"
+msgstr "Создать статус"
 
 #: task_manager/templates/tasks/create_task.html:10
 #: task_manager/templates/tasks/tasks.html:9
@@ -249,5 +248,3 @@ msgstr ""
 msgid "User deleted"
 msgstr "Удалить"
 
-#~ msgid "Do you want to delete user?"
-#~ msgstr "Вы уверены, что хотите удалить? "
