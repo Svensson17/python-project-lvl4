@@ -25,7 +25,7 @@ from task_manager.views import IndexView, \
 
 urlpatterns = [
     path('delete_user/<int:pk>/', DeleteUser.as_view(), name='delete_user'),
-    path('edit_user/<int:pk>/', EditUser.as_view(), name='edit_user'),
+    path('users/<int:pk>/update/', EditUser.as_view(), name='edit_user'),
     path('logout/', LogoutUser.as_view(), name='logout'),
     path('login/', LoginUser.as_view(), name='login'),
     path('users/create/', CreateUser.as_view(), name='register'),
