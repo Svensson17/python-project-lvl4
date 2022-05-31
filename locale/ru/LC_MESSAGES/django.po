@@ -26,7 +26,7 @@ msgstr "Метки"
 
 #: app/filter.py:17
 msgid "show my tasks"
-msgstr "Показать мои задачи"
+msgstr "Только свои задачи"
 
 #: app/models.py:14 task_manager/templates/statuses/statuses.html:15
 msgid "status name"
