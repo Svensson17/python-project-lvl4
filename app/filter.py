@@ -8,7 +8,7 @@ class TaskFilter(FilterSet):
     label = ModelChoiceFilter(
         queryset=Label.objects.all(),
         field_name='labels',
-        label=_('labels')
+        label=_('label')
     )
     self_tasks = BooleanFilter(
         widget=forms.CheckboxInput,

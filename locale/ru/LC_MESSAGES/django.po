@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-29 15:00+0000\n"
+"POT-Creation-Date: 2022-05-31 16:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,9 +20,9 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: app/filter.py:11 app/models.py:42 task_manager/templates/base.html:51
-msgid "labels"
-msgstr "Метки"
+#: app/filter.py:11
+msgid "label"
+msgstr "Метка"
 
 #: app/filter.py:17
 msgid "show my tasks"
@@ -52,6 +52,10 @@ msgstr "Исполнитель"
 msgid "status"
 msgstr "Статус"
 
+#: app/models.py:42 task_manager/templates/base.html:51
+msgid "labels"
+msgstr "Метки"
+
 #: app/models.py:45 task_manager/templates/tasks/tasks.html:27
 msgid "created_at"
 msgstr "Дата создания"
@@ -68,39 +72,39 @@ msgstr "Статус успешно создан"
 msgid "Status successfully updated"
 msgstr "Статус успешно изменён"
 
-#: app/views.py:47 app/views.py:60
+#: app/views.py:47 app/views.py:64
 msgid "Status successfully deleted"
 msgstr "Статус успешно удалён"
 
-#: app/views.py:58
+#: app/views.py:60
 msgid "Unable to delete status because it is in use"
 msgstr "Невозможно удалить. Статус используется."
 
-#: app/views.py:75
+#: app/views.py:79
 msgid "Task successfully created"
 msgstr "Задача успешно создана"
 
-#: app/views.py:89
+#: app/views.py:93
 msgid "Task successfully updated"
 msgstr "Задача успешно изменена"
 
-#: app/views.py:102
+#: app/views.py:106
 msgid "Task successfully deleted"
 msgstr "Задача успешно удалена"
 
-#: app/views.py:125
+#: app/views.py:129
 msgid "Label successfully created"
 msgstr "Метка успешно создана"
 
-#: app/views.py:135
+#: app/views.py:139
 msgid "Label successfully updated"
 msgstr "Метка успешно изменена"
 
-#: app/views.py:148
+#: app/views.py:152
 msgid "Label successfully deleted"
 msgstr "Метка успешно удалена"
 
-#: task_manager/mixin.py:12 task_manager/views.py:54
+#: task_manager/mixin.py:13 task_manager/views.py:58
 msgid "You do not have permission to modify another user."
 msgstr "У вас нет прав редактировать другого пользователя."
 
@@ -220,34 +224,34 @@ msgstr "Имя пользователя"
 msgid "registration date"
 msgstr "Дата регистрации"
 
-#: task_manager/views.py:33
+#: task_manager/views.py:36
 msgid "User was successfully created"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/views.py:41
+#: task_manager/views.py:44
 msgid "Welcome to your profile"
 msgstr "Вы залогинены"
 
-#: task_manager/views.py:46
+#: task_manager/views.py:49
 msgid "You are logged out"
 msgstr "Вы разлогинены"
 
-#: task_manager/views.py:55
+#: task_manager/views.py:60
 msgid "User successfully updated"
 msgstr "Пользователь успешно изменён"
 
-#: task_manager/views.py:68
+#: task_manager/views.py:77
 msgid "You do not have permission to modify another user"
 msgstr "У вас нет прав редактировать другого пользователя."
 
-#: task_manager/views.py:69
+#: task_manager/views.py:79
 msgid "User was deleted successfully"
 msgstr "Пользователь успешно удалён"
 
-#: task_manager/views.py:84
+#: task_manager/views.py:95
 msgid "Unable to delete user because it is in use"
 msgstr ""
 
-#: task_manager/views.py:87
+#: task_manager/views.py:98
 msgid "User deleted"
 msgstr "Удалить"
