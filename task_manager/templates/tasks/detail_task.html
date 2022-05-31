@@ -5,9 +5,12 @@
   <p>{{ task.name }}</p>
   <p>{{ task.id }}</p>
   <p>{{ task.author }}</p>
-  <p>{{task.executor}}</p>
-  <p>{{task.description}}</p>
-  <p>{{task.created_at}}</p>
+  <p>{{ task.executor }}</p>
+  <p>{{ task.description }}</p>
+  <p>{{ task.created_at }}</p>
   <p>{{task.status}}</p>
+  {% for label in task.labels.all %}
+  <p>{{label.name}}</p>
+  {% endfor %}
 </div>
 {% endblock %}
