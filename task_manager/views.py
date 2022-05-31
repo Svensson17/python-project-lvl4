@@ -1,10 +1,13 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import redirect
-from django.views.generic import TemplateView, ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import TemplateView, \
+    ListView, \
+    CreateView, \
+    UpdateView, \
+    DeleteView
 from django.urls import reverse, reverse_lazy
 from django.contrib import messages
 
@@ -51,7 +54,9 @@ class EditUser(LoginRequiredMixin, SuccessMessageMixin, CheckUserForDeleteMixin,
     model = get_user_model()
     template_name = 'users/edit_user.html'
     form_class = UserForm
-    permission_denied_message = _('You do not have permission to modify another user.')
+    permission_denied_message = _(
+        'You do not have permission to modify another user.'
+    )
     success_message = _('User successfully updated')
 
     def handle_no_permission(self):
@@ -62,11 +67,17 @@ class EditUser(LoginRequiredMixin, SuccessMessageMixin, CheckUserForDeleteMixin,
         return reverse('users')
 
 
-class DeleteUser(LoginRequiredMixin, SuccessMessageMixin, CheckUserForDeleteMixin, DeleteView):
+class DeleteUser(LoginRequiredMixin,
+                 SuccessMessageMixin,
+                 CheckUserForDeleteMixin,
+                 DeleteView):
     model = get_user_model()
     template_name = 'users/delete_user.html'
-    permission_denied_message = _('You do not have permission to modify another user')
+    permission_denied_message = _(
+        'You do not have permission to modify another user'
+    )
     success_message = _('User was deleted successfully')
+
     def handle_no_permission(self):
         messages.error(self.request, self.get_permission_denied_message())
         return redirect(reverse_lazy('users'))
