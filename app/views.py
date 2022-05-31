@@ -3,7 +3,11 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.urls import reverse, reverse_lazy
-from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
+from django.views.generic import ListView, \
+    CreateView, \
+    DeleteView, \
+    UpdateView, \
+    DetailView
 from django_filters.views import FilterView
 from app.filter import TaskFilter
 from app.forms import TaskForm
