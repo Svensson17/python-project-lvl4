@@ -1,7 +1,7 @@
 from django.urls import path
 
 from app.views import StatusList, CreateStatus, UpdateStatus, DeleteStatus, TaskList, DeleteTask, UpdateTask, \
-    CreateTask, LabelList, CreateLabel, UpdateLabel, DeleteLabel
+    CreateTask, LabelList, CreateLabel, UpdateLabel, DeleteLabel, DetailTask
 
 urlpatterns = [
 
@@ -18,6 +18,7 @@ urlpatterns = [
     path('tasks/', TaskList.as_view(), name='tasks'),
     path('tasks/create/', CreateTask.as_view(), name='create_task'),
     path('tasks/<int:pk>/update/', UpdateTask.as_view(), name='update_task'),
+    path('tasks/<int:pk>/', DetailTask.as_view(), name='detail_task'),
     path('tasks/<int:pk>/delete/', DeleteTask.as_view(), name='delete_task'),
     path('labels/', LabelList.as_view(), name='labels'),
     path('labels/create/', CreateLabel.as_view(), name='create_label'),

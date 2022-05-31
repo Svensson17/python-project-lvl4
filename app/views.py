@@ -3,7 +3,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.urls import reverse, reverse_lazy
-from django.views.generic import ListView, CreateView, DeleteView, UpdateView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
 from django_filters.views import FilterView
 from app.filter import TaskFilter
 from app.forms import TaskForm
@@ -157,3 +157,18 @@ class DeleteLabel(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
 
     def get_success_url(self):
         return reverse('labels')
+
+
+class DetailTask(LoginRequiredMixin, DetailView):
+    model = Task
+    # form_class = TaskForm
+    template_name = 'tasks/detail_task.html'
+    context_object_name = 'task'
+    # success_message = _('Task successfully updated')
+    #
+    # def handle_no_permission(self):
+    #     messages.error(self.request, self.get_permission_denied_message())
+    #     return redirect(reverse_lazy('tasks'))
+    #
+    # def get_success_url(self):
+    #     return reverse('tasks')

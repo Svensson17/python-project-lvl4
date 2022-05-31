@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+  <p>{{ task.name }}</p>
+  <p>{{ task.id }}</p>
+  <p>{{ task.author }}</p>
+  <p>{{task.executor}}</p>
+  <p>{{task.description}}</p>
+  <p>{{task.created_at}}</p>
+  <p>{{task.status}}</p>
+</div>
+{% endblock %}
