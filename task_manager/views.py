@@ -50,7 +50,12 @@ class LogoutUser(LogoutView):
         return super().dispatch(request, *args, **kwargs)
 
 
-class EditUser(LoginRequiredMixin, SuccessMessageMixin, CheckUserForDeleteMixin, UpdateView):
+class EditUser(
+    LoginRequiredMixin,
+    SuccessMessageMixin,
+    CheckUserForDeleteMixin,
+    UpdateView
+):
     model = get_user_model()
     template_name = 'users/edit_user.html'
     form_class = UserForm
