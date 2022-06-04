@@ -15,22 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from task_manager.views import IndexView, \
-    UsersList, \
-    CreateUser, \
-    LoginUser, \
-    LogoutUser,\
-    EditUser, \
-    DeleteUser
+
 
 urlpatterns = [
-    path('users/<int:pk>/delete/', DeleteUser.as_view(), name='delete_user'),
-    path('users/<int:pk>/update/', EditUser.as_view(), name='edit_user'),
-    path('logout/', LogoutUser.as_view(), name='logout'),
-    path('login/', LoginUser.as_view(), name='login'),
-    path('users/create/', CreateUser.as_view(), name='register'),
-    path('users/', UsersList.as_view(), name='users'),
-    path('', IndexView.as_view(), name='index'),
     path('admin/', admin.site.urls),
     path('', include('app.urls'))
 ]

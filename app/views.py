@@ -1,4 +1,6 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.shortcuts import redirect
@@ -7,10 +9,11 @@ from django.views.generic import ListView, \
     CreateView, \
     DeleteView, \
     UpdateView, \
-    DetailView
+    DetailView, TemplateView
 from django_filters.views import FilterView
 from app.filter import TaskFilter
-from app.forms import TaskForm
+from app.forms import TaskForm, UserForm
+from app.mixin import CheckUserForDeleteMixin
 from app.models import Status, Task, Label
 from django.utils.translation import gettext as _
 
@@ -168,11 +171,91 @@ class DetailTask(LoginRequiredMixin, DetailView):
     # form_class = TaskForm
     template_name = 'tasks/detail_task.html'
     context_object_name = 'task'
-    # success_message = _('Task successfully updated')
-    #
-    # def handle_no_permission(self):
-    #     messages.error(self.request, self.get_permission_denied_message())
-    #     return redirect(reverse_lazy('tasks'))
-    #
-    # def get_success_url(self):
-    #     return reverse('tasks')
+
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
+
+class UsersList(ListView):
+    model = get_user_model()
+    template_name = 'users/users.html'
+    context_object_name = 'users'
+
+
+class CreateUser(SuccessMessageMixin, CreateView):
+    form_class = UserForm
+
+    def get_success_url(self):
+        return reverse('login')
+
+    template_name = 'users/registration.html'
+    success_message = _('User was successfully created')
+
+
+class LoginUser(SuccessMessageMixin, LoginView):
+    template_name = 'users/login.html'
+
+    def get_success_url(self):
+        return reverse('index')
+    success_message = _('Welcome to your profile')
+
+
+class LogoutUser(LogoutView):
+    def dispatch(self, request, *args, **kwargs):
+        messages.info(request, _('You are logged out'))
+        return super().dispatch(request, *args, **kwargs)
+
+
+class EditUser(
+    LoginRequiredMixin,
+    SuccessMessageMixin,
+    CheckUserForDeleteMixin,
+    UpdateView
+):
+    model = get_user_model()
+    template_name = 'users/edit_user.html'
+    form_class = UserForm
+    permission_denied_message = _(
+        'You do not have permission to modify another user.'
+    )
+    success_message = _('User successfully updated')
+
+    def handle_no_permission(self):
+        messages.error(self.request, self.get_permission_denied_message())
+        return redirect(reverse_lazy('users'))
+
+    def get_success_url(self):
+        return reverse('users')
+
+
+class DeleteUser(LoginRequiredMixin,
+                 SuccessMessageMixin,
+                 CheckUserForDeleteMixin,
+                 DeleteView):
+    model = get_user_model()
+    template_name = 'users/delete_user.html'
+    permission_denied_message = _(
+        'You do not have permission to modify another user'
+    )
+    success_message = _('User was deleted successfully')
+
+    def handle_no_permission(self):
+        messages.error(self.request, self.get_permission_denied_message())
+        return redirect(reverse_lazy('users'))
+
+    def get_success_url(self):
+        return reverse('users')
+
+    def delete(self, request, *args, **kwargs):
+        if (
+            self.get_object().executor.all().exists()
+            or self.get_object().author.all().exists()
+        ):
+            messages.error(
+                self.request,
+                _('Unable to delete user because it is in use')
+            )
+            return redirect('users')
+        messages.success(self.request, _('User deleted'))
+        return super().delete(request, *args, **kwargs)

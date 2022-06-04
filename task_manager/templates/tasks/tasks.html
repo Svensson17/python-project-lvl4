@@ -4,6 +4,7 @@
 {% load i18n %}
 {% bootstrap_javascript jquery='full' %}
 {% block content %}
+<h3>{% trans "tasks" %}</h3>
 <div>
   <div>
     <a class="p-2 text-dark" href="{% url 'create_task'%}">{% trans "create task" %}</a>
@@ -22,10 +23,10 @@
     <thead>
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">{% trans 'task_name' %}</th>
       <th scope="col">{% trans 'author' %}</th>
       <th scope="col">{% trans 'executor' %}</th>
       <th scope="col">{% trans 'created_at' %}</th>
-      <th scope="col">{% trans 'task_name' %}</th>
       <th scope="col">{% trans 'status' %}</th>
       <th scope="col">{% trans 'edit' %}</th>
       <th scope="col">{% trans 'delete' %}</th>
@@ -35,10 +36,10 @@
     {% for task in tasks %}
       <tr>
         <td>{{task.id}}</td>
+        <td><a class="p-2 text-dark" href="{% url 'detail_task' task.id %}">{{ task.name }}</a></td>
         <td>{{task.author}}</td>
         <td>{{task.executor}}</td>
         <td>{{task.created_at}}</td>
-        <td><a class="p-2 text-dark" href="{% url 'detail_task' task.id %}">{{ task.name }}</a></td>
         <td>{{task.status}}</td>
         <td>
            <a class="p-2 text-dark" href="{% url 'update_task' task.id %}">{% trans "edit" %}</a>
