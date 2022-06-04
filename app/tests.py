@@ -71,4 +71,3 @@ class TestStatusCRUD(TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(Status.objects.all()), 0)
-
