@@ -10,17 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from pathlib import Path
 import os
-
 import dj_database_url
 import rollbar
+from pathlib import Path
+from django.urls import reverse_lazy
 from dotenv import load_dotenv
 load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-from django.urls import reverse_lazy
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
