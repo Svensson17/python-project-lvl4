@@ -29,10 +29,15 @@
         <div class="col">{% trans "status" %}</div>
         <div class="col"><p>{{ task.status }}</p></div>
       </div>
+      <div class="row p-1">
+        <div class="col">{% trans "label" %}</div>
+        <div class="col">
+          {% for label in task.labels.all %}
+            <p>{{label.name}}</p>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
-  {% for label in task.labels.all %}
-  <p>{{label.name}}</p>
-  {% endfor %}
 </div>
 {% endblock %}
