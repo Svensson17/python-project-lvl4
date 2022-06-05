@@ -1,14 +1,36 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
-<div>
-  <p>{{ task.name }}</p>
-  <p>{{ task.id }}</p>
-  <p>{{ task.author }}</p>
-  <p>{{ task.executor }}</p>
-  <p>{{ task.description }}</p>
-  <p>{{ task.created_at }}</p>
-  <p>{{task.status}}</p>
+
+<div class="container wrapper flex-grow-1">
+  <h1 class="my-4">{% trans "task description" %}</h1>
+  <div class="card">
+    <div class="card header bg-secondary text-white">
+      <h2>{% trans "task name" %} {{task.name}}</h2>
+    </div>
+    <div class="container">
+      <div class="row p-1">
+        <div class="col">{% trans "id" %}</div>
+        <div class="col"><p>{{ task.id }}</p></div>
+      </div>
+      <div class="row p-1">
+        <div class="col">{% trans "author" %}</div>
+        <div class="col"><p>{{ task.author }}</p></div>
+      </div>
+      <div class="row p-1">
+        <div class="col">{% trans "description" %}</div>
+        <div class="col"><p>{{ task.description }}</p></div>
+      </div>
+      <div class="row p-1">
+        <div class="col">{% trans "created_at" %}</div>
+        <div class="col"><p>{{ task.created_at }}</p></div>
+      </div>
+      <div class="row p-1">
+        <div class="col">{% trans "status" %}</div>
+        <div class="col"><p>{{ task.status }}</p></div>
+      </div>
+    </div>
+  </div>
   {% for label in task.labels.all %}
   <p>{{label.name}}</p>
   {% endfor %}
