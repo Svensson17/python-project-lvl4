@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/59118e1b41455367e86d/maintainability)](https://codeclimate.com/github/Svensson17/python-project-lvl4/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/59118e1b41455367e86d/test_coverage)](https://codeclimate.com/github/Svensson17/python-project-lvl4/test_coverage)
 
-Приложение развернуто на Heroku: https://dashboard.heroku.com/apps/warm-temple-58793
+Приложение развернуто на Heroku: https://warm-temple-58793.herokuapp.com/
 
 ## Функциональные возможности
 приложение настроено на работу с базой данных PostgreSQL;
